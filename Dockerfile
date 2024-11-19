@@ -4,7 +4,12 @@ FROM docker.elastic.co/elasticsearch/elasticsearch:8.9.0
 ENV discovery.type=single-node
 ENV ES_JAVA_OPTS="-Xms512m -Xmx512m"
 ENV xpack.security.enabled=false
-ENV xpack.security.http.ssl.enabled=false
+
+# VIVO index name
+ENV INDEX_NAME="vivo"
+
+# Default es username
+ENV ES_USERNAME="elastic"
 
 EXPOSE 9200 9300
 
