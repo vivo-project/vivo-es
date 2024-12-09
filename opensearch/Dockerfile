@@ -3,7 +3,7 @@ FROM opensearchproject/opensearch:2.18.0
 # Simple, single node deployment
 ENV discovery.type=single-node
 ENV OPENSEARCH_JAVA_OPTS="-Xms512m -Xmx512m"
-# ENV plugins.security.disabled=true
+ENV plugins.security.disabled=true
 
 # VIVO index name
 ENV INDEX_NAME="vivo"
